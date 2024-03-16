@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="../build/quickcart.api.props" />
-</Project>

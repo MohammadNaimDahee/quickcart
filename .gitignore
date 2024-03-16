@@ -1,6 +1,7 @@
-node_modules
-*.dll
-.DS_Store
 .vscode
+node_modules
+quickcart.api/Resources/Images
 quickcart.api/bin
 quickcart.api/obj
+*.dll
+.DS_Store
