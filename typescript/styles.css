@@ -1,0 +1,166 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Change flex-direction to column */
+}
+
+form > * {
+    margin-bottom: 10px; /* Add margin between form elements */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="submit"] {
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+    border-color: #80bdff;
+    outline: none;
+}
+
+input[type="submit"] {
+    background: linear-gradient(to bottom, #28a745 0%, #218838 100%);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background: linear-gradient(to bottom, #218838 0%, #1e7e34 100%);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #e9ecef 100%); /* Changed background color */
+}
+
+li {
+    padding: 15px;
+    border-bottom: 1px solid #ced4da;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+}
+
+li:hover {
+    background-color: #e9ecef;
+}
+
+.delete-btn {
+    background: linear-gradient(to bottom, #dc3545 0%, #c82333 100%);
+    border: none;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background: linear-gradient(to bottom, #c82333 0%, #ac1f2c 100%);
+}
+
+.todo-info {
+    color: #333; /* Changed text color */
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: flex; /* Added */
+    justify-content: flex-end; /* Added */
+    align-items: center; /* Added */
+}
+
+.todo-info > * {
+    margin-left: 5px; /* Added */
+}
+
+.todo-info .delete-btn {
+    margin-left: auto; /* Added */
+}
+
+.todo-info .todo-date {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.category {
+    background-color: #007bff; /* Blue color for category */
+    color: #fff; /* White text color */
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+select#type-input {
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/* Style for the options in the select dropdown */
+select#type-input option {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #fff; /* Background color for options */
+    color: #333; /* Text color for options */
+}
+
+.category.Work {
+    background-color: #007bff; /* Blue color for Work category */
+}
+
+.category.Personal {
+    background-color: #ffc107; /* Yellow color for Personal category */
+}
+
+.category.Home {
+    background-color: #28a745; /* Green color for Home category */
+}
+
+.category.Health {
+    background-color: #dc3545; /* Red color for Health category */
+}
+
+.category.Study {
+    background-color: #6c757d; /* Gray color for Study category */
+}

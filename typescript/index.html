@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Todo List</h1>
+        <ul id="todo-list">
+            <!-- Todos will be dynamically added here -->
+        </ul>
+        <form id="todo-form">
+            <input type="text" id="todo-input" placeholder="Add a new todo" required>
+            <select id="type-input">
+                <option value="" selected disabled>Select a category</option>
+                <option value="Work">Work</option>
+                <option value="Personal">Personal</option>
+                <option value="Home">Home</option>
+                <option value="Health">Health</option>
+                <option value="Study">Study</option>
+            </select>
+            <input type="date" id="date-input">
+            <input type="submit" value="Add Todo">
+        </form>
+    </div>
+
+    <script src="scripts.js"></script> <!-- Include your JavaScript file -->
+</body>
+
+</html>
