@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("quickcart.api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ace6206c98fa26fb9dd600961e5a80f51a2ace4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c136b24c2127b5f4f170c7defab6d4c0153f1b35")]
 [assembly: System.Reflection.AssemblyProductAttribute("quickcart.api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("quickcart.api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
