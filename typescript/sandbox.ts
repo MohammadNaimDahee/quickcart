@@ -1,11 +1,19 @@
-let firstName = "Mohammad";
+// Arrays
+// String arrays
+let names: string[] = ["ahmad", "mohammad"];
+// Number arrays
+let ages = [10, 15];
+// Mixed arrays
+let mixedArray: (string | number | boolean)[] = ["ahmad", 20, false];
+mixedArray.push(10, "mohammad", true, 30);
 
-firstName = "Ahmad";
+console.log(mixedArray);
+// Objects
 
-let age = 20;
-
-const circ = (number: number) => {
-  console.log(number * Math.PI);
+const person = {
+  name: "ahmad",
+  age: 20,
+  isLogged: false,
 };
 
-circ(2.7);
+console.log(person);
