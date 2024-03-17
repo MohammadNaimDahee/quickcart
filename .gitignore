@@ -4,4 +4,4 @@ quickcart.api/Resources/Images
 quickcart.api/bin
 quickcart.api/obj
 *.dll
-.DS_Store
+*.DS_Store
