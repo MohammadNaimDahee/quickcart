@@ -1,41 +1,39 @@
-// Explicit Types
-let firstName: string;
-let age: number;
-let isLoggedIn: boolean;
+// Dynamic (any) type
+let firstName: any;
 
-firstName = "ahmad";
-age = 10;
-isLoggedIn = true;
+firstName = "mohammad";
+console.log(firstName);
 
-//Arrays
-let names: string[] = [];
+firstName = 20;
+console.log(firstName);
 
-names.push("ahmad");
-// Union Types
-let union: (string | number)[] = [];
-union.push("ahmad", 10);
+firstName = new Date();
 
-let mixedValue: number | string;
-mixedValue = "mohammad";
-mixedValue = 10;
+firstName = { name: "Mohammad", age: 20 };
 
-// Objects
+console.log(firstName);
 
-let person: object;
+let names: any[] = [];
 
-person = { name: "ahmad", age: 10, isLogged: false };
+names.push("ahmad", 20, false, new Date(), { name: "mohammad", age: 20 });
+console.log(names);
 
-let user: {
-  firstName: string;
-  lastName: string;
-  dateOfBirth: Date;
-  isLogged?: boolean;
-};
+let user: any;
 
-user = {
-  firstName: "mohammad",
-  lastName: "ahmad",
-  dateOfBirth: new Date(),
-};
-
+user = { name: "ahmad", age: 20 };
 console.log(user);
+
+user = { name: 20, age: "mohammad" };
+console.log(user);
+
+let person: {
+  name: any;
+  age: any;
+};
+
+person = {
+  name: 20,
+  age: "ahmad",
+};
+
+console.log(person);

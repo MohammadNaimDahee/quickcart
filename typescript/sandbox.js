@@ -1,26 +1,23 @@
-// Explicit Types
+// Dynamic (any) type
 var firstName;
-var age;
-var isLoggedIn;
-firstName = "ahmad";
-age = 10;
-isLoggedIn = true;
-//Arrays
+firstName = "mohammad";
+console.log(firstName);
+firstName = 20;
+console.log(firstName);
+firstName = new Date();
+firstName = { name: "Mohammad", age: 20 };
+console.log(firstName);
 var names = [];
-names.push("ahmad");
-// Union Types
-var union = [];
-union.push("ahmad", 10);
-var mixedValue;
-mixedValue = "mohammad";
-mixedValue = 10;
-// Objects
-var person;
-person = { name: "ahmad", age: 10, isLogged: false };
+names.push("ahmad", 20, false, new Date(), { name: "mohammad", age: 20 });
+console.log(names);
 var user;
-user = {
-    firstName: "mohammad",
-    lastName: "ahmad",
-    dateOfBirth: new Date(),
-};
+user = { name: "ahmad", age: 20 };
 console.log(user);
+user = { name: 20, age: "mohammad" };
+console.log(user);
+var person;
+person = {
+    name: 20,
+    age: "ahmad",
+};
+console.log(person);
