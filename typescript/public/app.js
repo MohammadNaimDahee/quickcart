@@ -1,4 +1,23 @@
 "use strict";
+// Classes
+class Todo {
+    constructor(todo, date, category) {
+        this.todo = todo;
+        this.date = date;
+        this.category = category;
+    }
+    toString() {
+        return `${this.todo} ${this.category} ${this.date}`;
+    }
+}
+const firstTodo = new Todo("read a book", new Date(), "Study");
+console.log(firstTodo);
+const secondTodo = new Todo("buy grocery", new Date(), "Shopping");
+console.log(secondTodo);
+const todoList = [];
+todoList.push(firstTodo);
+todoList.push(secondTodo);
+console.log(todoList);
 // Interacting with DOM (Document Object Model)
 const h1 = document.querySelector("h1");
 console.log(h1.innerText);
