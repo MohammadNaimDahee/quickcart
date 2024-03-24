@@ -31,7 +31,7 @@ form > * {
 
 input[type="text"],
 input[type="date"],
-input[type="submit"] {
+button[type="submit"] {
     padding: 12px;
     border: 1px solid #ced4da;
     border-radius: 8px;
@@ -45,7 +45,7 @@ input[type="date"]:focus {
     outline: none;
 }
 
-input[type="submit"] {
+button[type="submit"] {
     background: linear-gradient(to bottom, #28a745 0%, #218838 100%);
     border: none;
     color: #fff;
@@ -55,7 +55,7 @@ input[type="submit"] {
     transition: background-color 0.3s;
 }
 
-input[type="submit"]:hover {
+button[type="submit"]:hover {
     background: linear-gradient(to bottom, #218838 0%, #1e7e34 100%);
 }
 
@@ -127,7 +127,7 @@ li:hover {
     margin-right: 10px;
 }
 
-select#type-input {
+select#category {
     padding: 12px;
     border: 1px solid #ced4da;
     border-radius: 8px;

@@ -14,9 +14,9 @@
         <ul id="todo-list">
             <!-- Todos will be dynamically added here -->
         </ul>
-        <form id="todo-form">
-            <input type="text" id="todo-input" placeholder="Add a new todo" required>
-            <select id="type-input">
+        <form class="todo-form">
+            <input type="text" id="todo" placeholder="Add a new todo" required />
+            <select id="category">
                 <option value="" selected disabled>Select a category</option>
                 <option value="Work">Work</option>
                 <option value="Personal">Personal</option>
@@ -24,13 +24,12 @@
                 <option value="Health">Health</option>
                 <option value="Study">Study</option>
             </select>
-            <input type="date" id="date-input">
-            <input type="submit" value="Add Todo">
+            <input type="date" id="date">
+            <button type="submit">Add Todo</button>
         </form>
     </div>
     <!-- Include your JavaScript file -->
-    <!-- <script src="scripts.js"></script>  -->
-    <script src="sandbox.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
