@@ -1,44 +1,25 @@
+import { Todo } from "./models/Todo.js";
 // Classes
-class Todo {
-  todo: string;
-  date: Date;
-  category: string;
-
-  constructor(todo: string, date: Date, category: string) {
-    this.todo = todo;
-    this.date = date;
-    this.category = category;
-  }
-
-  toString(): string {
-    return `${this.todo} ${this.category} ${this.date}`;
-  }
-}
+// Data Modifiers
+// Module
 
 const firstTodo: Todo = new Todo("read a book", new Date(), "Study");
-
-console.log(firstTodo);
-
 const secondTodo: Todo = new Todo("buy grocery", new Date(), "Shopping");
-console.log(secondTodo);
 
 const todoList: Todo[] = [];
 
-todoList.push(firstTodo);
-todoList.push(secondTodo);
+todoList.push(firstTodo, secondTodo);
 
-console.log(todoList);
+todoList.forEach((todo: Todo) => {
+  console.log(`${todo.todo}\n${todo.date}\n${todo.toString()}`);
+});
 
 // Interacting with DOM (Document Object Model)
-
 const h1: HTMLHeadingElement = document.querySelector("h1")!;
-console.log(h1.innerText);
 
 const form: HTMLFormElement = document.querySelector(
   ".todo-form"
 ) as HTMLFormElement;
-
-console.log(form.children);
 
 const todo = document.querySelector("#todo") as HTMLInputElement;
 const category = document.querySelector("#category") as HTMLSelectElement;
