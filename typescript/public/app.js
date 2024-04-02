@@ -1,3 +1,23 @@
+let shape = {
+    name: "shape",
+    color: (color) => {
+        console.log(color);
+    },
+    area: () => {
+        return 5;
+    },
+};
+console.log(shape);
+let circle = {
+    name: "Circle",
+    color: (color) => {
+        console.log(color);
+    },
+    area: () => {
+        return 10 * Math.sqrt(Math.PI);
+    },
+};
+console.log(circle.area());
 import { Todo } from "./models/Todo.js";
 // Classes
 // Data Modifiers

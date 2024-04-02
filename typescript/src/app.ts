@@ -1,3 +1,34 @@
+// Interfaces
+interface Shape {
+  name: string;
+  color: (color: string) => void;
+  area: () => number;
+}
+
+let shape: Shape = {
+  name: "shape",
+  color: (color: string): void => {
+    console.log(color);
+  },
+  area: (): number => {
+    return 5;
+  },
+};
+
+console.log(shape);
+
+let circle: Shape = {
+  name: "Circle",
+  color: (color: string) => {
+    console.log(color);
+  },
+  area: () => {
+    return 10 * Math.sqrt(Math.PI);
+  },
+};
+
+console.log(circle.area());
+
 import { Todo } from "./models/Todo.js";
 // Classes
 // Data Modifiers
