@@ -1,43 +1,22 @@
-let shape = {
-    name: "shape",
-    color: (color) => {
-        console.log(color);
-    },
-    area: () => {
-        return 5;
-    },
-};
-console.log(shape);
-let circle = {
-    name: "Circle",
-    color: (color) => {
-        console.log(color);
-    },
-    area: () => {
-        return 10 * Math.sqrt(Math.PI);
-    },
-};
-console.log(circle.area());
-import { Todo } from "./models/Todo.js";
-// Classes
-// Data Modifiers
-// Module
-const firstTodo = new Todo("read a book", new Date(), "Study");
-const secondTodo = new Todo("buy grocery", new Date(), "Shopping");
-const todoList = [];
-todoList.push(firstTodo, secondTodo);
-todoList.forEach((todo) => {
-    console.log(`${todo.todo}\n${todo.date}\n${todo.toString()}`);
-});
+import { NormalTodo } from "./models/NormalTodo.js";
+import { PriorityTodo } from "./models/PriorityTodo.js";
+let todoList = [];
 // Interacting with DOM (Document Object Model)
 const h1 = document.querySelector("h1");
 const form = document.querySelector(".todo-form");
+const type = document.querySelector("#type");
 const todo = document.querySelector("#todo");
 const category = document.querySelector("#category");
 const date = document.querySelector("#date");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    console.log(todo.value);
-    console.log(category.value);
-    console.log(date.value);
+    let todoo;
+    if (type.value === "normal") {
+        todoo = new NormalTodo(todo.value, date.value, category.value);
+    }
+    else {
+        todoo = new PriorityTodo(todo.value, date.value, category.value);
+    }
+    todoList.push(todoo);
+    console.log(todoList);
 });

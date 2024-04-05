@@ -15,6 +15,11 @@
             <!-- Todos will be dynamically added here -->
         </ul>
         <form class="todo-form">
+            <select id="type">
+                <option value="" selected disabled>Select a type</option>
+                <option value="priority">Priority</option>
+                <option value="normal">Normal</option>
+            </select>
             <input type="text" id="todo" placeholder="Add a new todo" required />
             <select id="category">
                 <option value="" selected disabled>Select a category</option>
