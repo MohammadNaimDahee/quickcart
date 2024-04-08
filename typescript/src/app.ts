@@ -1,10 +1,12 @@
+import { TodoListItem } from "./components/TodoListItem.js";
 import { HasFormatter } from "./interfaces/HasFormatter.js";
 import { NormalTodo } from "./models/NormalTodo.js";
 import { PriorityTodo } from "./models/PriorityTodo.js";
-let todoList: HasFormatter[] = [];
 
 // Interacting with DOM (Document Object Model)
 const h1: HTMLHeadingElement = document.querySelector("h1")!;
+const ul: HTMLUListElement = document.querySelector("ul")!;
+const todoListItem = new TodoListItem(ul);
 
 const form: HTMLFormElement = document.querySelector(
   ".todo-form"
@@ -24,7 +26,21 @@ form.addEventListener("submit", (event: Event) => {
   } else {
     todoo = new PriorityTodo(todo.value, date.value, category.value);
   }
-  todoList.push(todoo);
 
-  console.log(todoList);
+  todoListItem.render(todoo, type.value);
+  clearForm(form);
 });
+
+const clearForm = (form: HTMLFormElement) => {
+  form
+    .querySelectorAll("input, select, textarea")
+    .forEach((element: Element) => {
+      if (
+        element instanceof HTMLInputElement ||
+        element instanceof HTMLSelectElement ||
+        element instanceof HTMLTextAreaElement
+      ) {
+        element.value = "";
+      }
+    });
+};

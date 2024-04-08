@@ -2,9 +2,9 @@ import { HasFormatter } from "../interfaces/HasFormatter.js";
 
 export class PriorityTodo implements HasFormatter {
   constructor(
-    readonly todo: string,
+    public todo: string,
     public date: string,
-    private category: string
+    public category: string
   ) {}
 
   format(): string {
