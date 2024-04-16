@@ -44,3 +44,41 @@ const clearForm = (form: HTMLFormElement) => {
       }
     });
 };
+
+// GENERICS
+
+const addUID = <T extends { name: string }>(obj: T) => {
+  let uid = Math.floor(Math.random() * 100);
+  return { ...obj, uid };
+};
+
+let userOne = addUID({ name: "ahmad", age: 20 });
+// let userTwo = addUID("adf")
+console.log(userOne.name);
+
+// With interfaces
+interface Resource<T> {
+  uid: number;
+  resourceName: string;
+  data: T;
+}
+
+const userThree: Resource<object> = {
+  uid: 1,
+  resourceName: "Person",
+  data: { name: "ahmad" },
+};
+
+console.log(userThree);
+
+const resoruceOne: Resource<string[]> = {
+  uid: 2,
+  resourceName: "Todo Item",
+  data: [
+    "read a book",
+    "learn typescript",
+    "Subscribe to Quantum Snippets Channel",
+  ],
+};
+
+console.log(resoruceOne);

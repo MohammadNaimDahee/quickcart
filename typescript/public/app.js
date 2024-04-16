@@ -33,3 +33,27 @@ const clearForm = (form) => {
         }
     });
 };
+// GENERICS
+const addUID = (obj) => {
+    let uid = Math.floor(Math.random() * 100);
+    return Object.assign(Object.assign({}, obj), { uid });
+};
+let userOne = addUID({ name: "ahmad", age: 20 });
+// let userTwo = addUID("adf")
+console.log(userOne.name);
+const userThree = {
+    uid: 1,
+    resourceName: "Person",
+    data: { name: "ahmad" },
+};
+console.log(userThree);
+const resoruceOne = {
+    uid: 2,
+    resourceName: "Todo Item",
+    data: [
+        "read a book",
+        "learn typescript",
+        "Subscribe to Quantum Snippets Channel",
+    ],
+};
+console.log(resoruceOne);
