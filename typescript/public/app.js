@@ -12,12 +12,17 @@ const category = document.querySelector("#category");
 const date = document.querySelector("#date");
 form.addEventListener("submit", (event) => {
     event.preventDefault();
+    let values = [
+        todo.value,
+        date.value,
+        category.value,
+    ];
     let todoo;
     if (type.value === "normal") {
-        todoo = new NormalTodo(todo.value, date.value, category.value);
+        todoo = new NormalTodo(...values);
     }
     else {
-        todoo = new PriorityTodo(todo.value, date.value, category.value);
+        todoo = new PriorityTodo(...values);
     }
     todoListItem.render(todoo, type.value);
     clearForm(form);
@@ -33,26 +38,9 @@ const clearForm = (form) => {
         }
     });
 };
-// With Enums
-var ResourceType;
-(function (ResourceType) {
-    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
-    ResourceType[ResourceType["TODO_ITEM"] = 1] = "TODO_ITEM";
-    ResourceType[ResourceType["PERSON"] = 2] = "PERSON";
-    ResourceType[ResourceType["FILM"] = 3] = "FILM";
-})(ResourceType || (ResourceType = {}));
-const resourceOne = {
-    uid: 1,
-    resourceType: ResourceType.PERSON,
-    data: { name: "ahmad" },
-};
-const resoruceTwo = {
-    uid: 2,
-    resourceType: ResourceType.TODO_ITEM,
-    data: [
-        "read a book",
-        "learn typescript",
-        "Subscribe to Quantum Snippets Channel",
-    ],
-};
-console.log(resourceOne, resoruceTwo);
+// TUPLES
+let arr = ["ahmad", 20, false];
+let tup = ["ahmad", 20, false];
+tup[0] = "mohammad";
+tup[1] = 20;
+console.log(tup);

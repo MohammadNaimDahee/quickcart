@@ -19,12 +19,16 @@ const date = document.querySelector("#date") as HTMLInputElement;
 
 form.addEventListener("submit", (event: Event) => {
   event.preventDefault();
-
+  let values: [string, string, string] = [
+    todo.value,
+    date.value,
+    category.value,
+  ];
   let todoo: HasFormatter;
   if (type.value === "normal") {
-    todoo = new NormalTodo(todo.value, date.value, category.value);
+    todoo = new NormalTodo(...values);
   } else {
-    todoo = new PriorityTodo(todo.value, date.value, category.value);
+    todoo = new PriorityTodo(...values);
   }
 
   todoListItem.render(todoo, type.value);
@@ -46,3 +50,9 @@ const clearForm = (form: HTMLFormElement) => {
 };
 
 // TUPLES
+let arr = ["ahmad", 20, false];
+
+let tup: [string, number, boolean] = ["ahmad", 20, false];
+tup[0] = "mohammad";
+tup[1] = 20;
+console.log(tup);
