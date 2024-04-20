@@ -33,27 +33,26 @@ const clearForm = (form) => {
         }
     });
 };
-// GENERICS
-const addUID = (obj) => {
-    let uid = Math.floor(Math.random() * 100);
-    return Object.assign(Object.assign({}, obj), { uid });
-};
-let userOne = addUID({ name: "ahmad", age: 20 });
-// let userTwo = addUID("adf")
-console.log(userOne.name);
-const userThree = {
+// With Enums
+var ResourceType;
+(function (ResourceType) {
+    ResourceType[ResourceType["BOOK"] = 0] = "BOOK";
+    ResourceType[ResourceType["TODO_ITEM"] = 1] = "TODO_ITEM";
+    ResourceType[ResourceType["PERSON"] = 2] = "PERSON";
+    ResourceType[ResourceType["FILM"] = 3] = "FILM";
+})(ResourceType || (ResourceType = {}));
+const resourceOne = {
     uid: 1,
-    resourceName: "Person",
+    resourceType: ResourceType.PERSON,
     data: { name: "ahmad" },
 };
-console.log(userThree);
-const resoruceOne = {
+const resoruceTwo = {
     uid: 2,
-    resourceName: "Todo Item",
+    resourceType: ResourceType.TODO_ITEM,
     data: [
         "read a book",
         "learn typescript",
         "Subscribe to Quantum Snippets Channel",
     ],
 };
-console.log(resoruceOne);
+console.log(resourceOne, resoruceTwo);
